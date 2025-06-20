@@ -1,0 +1,25 @@
+project: waves
+name: few_shot
+
+data:
+  representation: 
+  num_shots: 5 # 5, 10
+  datafile_path: ../data/${project}
+  label_replacements:
+    "-1": "The following images contain beats with the waves marked in different colors. Specifically: P wave in black, QRS complex in blue, S wave in green and T wave in red."
+  label_predictions:
+    "P": 0
+    "QRS": 1
+    "T": 2
+  save_path: ../results/${project}/${data.num_shots}
+
+model:
+  model_name: gpt-4o # gemma-3-27b-it gpt-4o
+  img_quality: high
+
+user_args:
+  system_prompt_path: ../prompts/${project}/system_prompt.txt
+  user_query_path: ../prompts/${project}/user_prompt_${name}.txt
+  verbose: True
+  debug: False
+  batched: False

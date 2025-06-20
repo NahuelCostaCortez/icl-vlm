@@ -1,0 +1,23 @@
+project: brugada
+name: zero_shot
+
+data:
+  representation: beat # full, lead, beat
+  num_shots: 0 # 5, 10
+  datafile_path: ../data/${project}
+  label_replacements:
+  label_predictions:
+    "Normal": 0
+    "Brugada": 1
+  save_path: ../results/${project}/${data.representation}/${name}
+
+model:
+  model_name: gpt-4o # lgemma-3-27b-it gpt-4o
+  img_quality: high
+
+user_args:
+  system_prompt_path: ../prompts/${project}/system_prompt.txt
+  user_query_path: ../prompts/${project}/user_prompt_${name}.txt
+  verbose: True
+  debug: False
+  batched: False

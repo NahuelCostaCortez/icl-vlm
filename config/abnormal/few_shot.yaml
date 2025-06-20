@@ -1,0 +1,25 @@
+project: abnormal
+name: few_shot
+
+data:
+  representation: 
+  num_shots: 5 # 5, 10
+  datafile_path: ../data/${project}
+  label_replacements:
+    "0": "The following images contain beats of normal ECGs"
+    "1": "The following images contain beats of ECGs with Bundle Branch Block"
+  label_predictions:
+    "Normal": 0
+    "LBBB": 1
+  save_path: ../results/${project}/${data.num_shots}
+
+model:
+  model_name: gpt-4o # gemma-3-27b-it gpt-4o
+  img_quality: high
+
+user_args:
+  system_prompt_path: ../prompts/${project}/system_prompt.txt
+  user_query_path: ../prompts/${project}/user_prompt_${name}.txt
+  verbose: True
+  debug: False
+  batched: False

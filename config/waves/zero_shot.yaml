@@ -1,0 +1,24 @@
+project: waves
+name: zero_shot
+
+data: 
+  representation: 
+  num_shots: 0 # 5, 10
+  datafile_path: ../data/${project}
+  label_replacements:
+  label_predictions:
+    "P": 0
+    "QRS": 1
+    "T": 2
+  save_path: ../results/${project}/${data.num_shots}
+
+model:
+  model_name: gpt-4o # gemma-3-27b-it gpt-4o
+  img_quality: high
+
+user_args:
+  system_prompt_path: ../prompts/${project}/system_prompt.txt
+  user_query_path: ../prompts/${project}/user_prompt_${name}.txt
+  verbose: True
+  debug: False
+  batched: False

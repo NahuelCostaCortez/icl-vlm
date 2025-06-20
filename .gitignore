@@ -1,0 +1,14 @@
+# Data files
+waves/icl/*
+!waves/icl/1.png
+waves/test/*
+!waves/test/1_QRS.png
+abnormal/icl/*
+!abnormal/icl/1.png
+abnormal/test/*
+!abnormal/test/1.png
+brugada/icl/*
+!brugada/icl/1.png
+!brugada/icl/1_segments.png
+brugada/test/*
+!brugada/test/1.png

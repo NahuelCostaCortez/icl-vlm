@@ -1,0 +1,28 @@
+The patient's image corresponds to a beat from an electrocardiogram (ECG).
+Your task is to determine which wave is highlighted in the image. Available answers are:
+
+- P
+- QRS
+- T
+
+Follow the steps below:
+
+1. To help you find the correct answer, we additionally provide you with example images with identified waves. They are color-coded as follows: 
+- P wave: black
+- QRS complex: blue
+- ST segment: green
+- T wave: red
+
+Study the example images carefully, noting the characteristic morphology and timing of each wave type. Pay particular attention to:
+1. The shape and duration of each wave
+2. The relative position of each wave in the beat
+3. The distinguishing features that help identify each wave/complex
+
+Here are the example images:
+-----------
+
+2. Have a detailed look at the image that is provided below. Take a deep breath, focus on the highlighted wave (the colored part) and its position within the beat. Compare what you see in the patient image to the features you learned about.
+
+2. Generate an output regarding your final thoughts.
+
+Here is the patient image:

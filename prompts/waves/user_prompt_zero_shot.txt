@@ -1,0 +1,14 @@
+The patient's image corresponds to a beat from an electrocardiogram (ECG).
+Your task is to determine which wave is highlighted in the image. Available answers are:
+
+- P
+- QRS
+- T
+
+Follow the steps below:
+
+1. Have a detailed look at the image that is provided below. Take a deep breath, focus on the highlighted wave (the colored part) and its position within the beat. Compare what you see in the patient image to the features you learned about.
+
+2. Generate an output regarding your final thoughts.
+
+Here is the patient image:

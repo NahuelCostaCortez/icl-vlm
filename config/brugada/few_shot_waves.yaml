@@ -1,0 +1,25 @@
+project: brugada
+name: few_shot_waves
+
+data:
+  representation: beat # full, lead, beat
+  num_shots: 5 # 5, 10
+  datafile_path: ../data/${project}
+  label_replacements:
+    "0": "This image contains a beat of type Normal"
+    "1": "This image contains a beat of type Brugada"
+  label_predictions:
+    "Normal": 0
+    "Brugada": 1
+  save_path: ../results/${project}/${data.representation}/${name}/${data.num_shots}
+
+model:
+  model_name: gpt-4o # gemma-3-27b-it gpt-4o
+  img_quality: high
+
+user_args:
+  system_prompt_path: ../prompts/${project}/system_prompt.txt
+  user_query_path: ../prompts/${project}/user_prompt_${name}.txt
+  verbose: True
+  debug: False
+  batched: False
