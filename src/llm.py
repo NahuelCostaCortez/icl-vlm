@@ -14,8 +14,7 @@ def initialize_client(model_name):
         client = OpenAI()
         openai.api_key = os.getenv("OPENAI_API_KEY")
     else:
-        # if lmstudio is used from windows and wsl - get url with "ip route/"
-        client = OpenAI(base_url="http://localhost:1234/v1", api_key="lmstudio")
+        client = OpenAI(base_url="http://localhost:8000/v1", api_key="vllm")
     
     return client
 

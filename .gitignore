@@ -12,3 +12,5 @@ brugada/icl/*
 !brugada/icl/1_segments.png
 brugada/test/*
 !brugada/test/1.png
+
+.DS_Store
